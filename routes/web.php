@@ -11,8 +11,10 @@
 |
 */
 
-Route::get('/', function () {
-    return view('welcome');
-});
-
-Route::get('/test', 'TestController@show');
+// Route::get('/', function () {
+//     return view('welcome');
+// });
+Route::get('login', 'LoginController@index');
+Route::post('login', 'LoginController@authenticate');
+Route::get('dashboard', 'DashboardController@dashboard');
+Route::get('test', 'TestController@show');
